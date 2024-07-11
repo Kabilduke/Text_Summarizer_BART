@@ -9,23 +9,29 @@ The project is built using Flask for the backend and HTML, CSS, and JavaScript f
 - Flashy and interactive UI elements for an engaging user experience.
 
 ### Requirement 
-Python 3.x
-Flask
-PyPDF2
-Transformers
-JavaScript (Fetch API)
+- Python 3.x
+- Flask
+- PyPDF2
+- Transformers
+- JavaScript (Fetch API)
 
 ### Installation
 1. Clone the repository
+   ```sh
    git clone https://github.com/Kabilduke/Text_Summarizer_BART.git
    cd Text_Summarizer_BART
+   ```
 
-2. Create a virtual environment and activate it:
+3. Create a virtual environment and activate it:
+   ```sh
    python -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
 
 3.Install the required packages:
+  ```sh
   pip install flask PyPDF2 transformers
+  ```
 
 ### Project Structure
 Text_summarizer_BART/
