@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BiDirectional Auto Regressive Transformer</title>
+    <link rel = "stylesheet" href ="{{url_for('static', filename ='style.css')}}">
+</head>
 
+<body>
+    <div class="container">
+        <div class = left-container>
+
+            <div class="upload-container">
+                <form action="{{url_for('upload_file')}}" method="post" enctype="multipart/form-data">
+                    <label for="File-upload" class="upload-label">
+                        Click here to upload PDF
+                    </label>
+                        <input type= "file" name ="file" id="file-upload" class="upload-input" accept="application/pdf">
+                        <div class="button-container">
+                            <button type="submit" class="upload-button">Upload PDF</button>
+                        </div>
+                </form>
+            </div>
+
+            <div class="Output-container">
+                <label for="output-label" class="output-label">
+                    <h3>Summarization :</h3>
+                </label>
+                <textarea id="summary-output" class="output-box" readonly>
+                    {{ summary if summary else '' }}
+                </textarea>
+            </div>
+
+        </div>
+
+        <div class="right-container">
+            <div class="description-container">
+                <label for="input-label" class="input-label">
+                    <h3>Enter Text :</h3>
+                </label>
+            </div>
+
+            <div class="input-container">
+                <textarea  id="text-input" class="input-box" placeholder="Enter the text here...">
+                </textarea>
+                <button type="submit" style="--clr:#604cc3" class="enter-button" onclick="submitText()">
+                    Enter
+                </button>
+            </div>
+
+            <div class="visual-container">
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        function typeText(element, text, speed){
+            let i = 0;
+            element.value = "";
+
+            function type(){
+                if(i < text.length){
+                    element.value += text.charAt(i)
+                    i++;
+                    setTimeout(type, speed)
+                }
+            }
+            type();
+        }
+
+        function submitText() {
+            const inputText = document.getElementById('text-input').value;
+            const summaryOutput = document.getElementById('summary-output');
+            fetch('/summarize', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ text: inputText })
+            })
+            .then(response => response.json())
+            .then(data => {
+                summaryOutput.classList.add('updated')
+                typeText(summaryOutput, data.summary, 50);
+                setTimeout(() => summaryOutput.classList.remove('updated'), 1000);     
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
