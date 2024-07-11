@@ -1,0 +1,42 @@
+# BiDirectional Auto Regressive Transformer Summarizer
+This project provides a web interface for uploading PDFs or entering text to generate a summarized output using the BiDirectional Auto Regressive Transformer (BART) model. 
+The project is built using Flask for the backend and HTML, CSS, and JavaScript for the frontend.
+
+### Features
+- Upload a PDF file to extract text and generate a summary.
+- Enter text directly into the text area to generate a summary.
+- Real-time typing effect for displaying the summarized text.
+- Flashy and interactive UI elements for an engaging user experience.
+
+### Requirement 
+Python 3.x
+Flask
+PyPDF2
+Transformers
+JavaScript (Fetch API)
+
+### Installation
+1. Clone the repository
+   git clone https://github.com/Kabilduke/Text_Summarizer_BART.git
+   cd Text_Summarizer_BART
+
+2. Create a virtual environment and activate it:
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+
+3.Install the required packages:
+  pip install flask PyPDF2 transformers
+
+### Project Structure
+Text_summarizer_BART/
+│
+├── app.py                  # Main Flask application
+├── templates/
+│   └── index.html          # Main HTML file
+├── static/
+│   ├── style.css           # CSS styles
+├── uploads/                # Directory to store uploaded PDF files
+└── README.md               # This README file
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any changes or improvements.
