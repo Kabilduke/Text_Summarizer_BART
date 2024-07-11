@@ -32,8 +32,13 @@ The project is built using Flask for the backend and HTML, CSS, and JavaScript f
   ```sh
   pip install flask PyPDF2 transformers
   ```
+4. Run the Flask app:
+    ```sh
+    python app.py
+    ```
 
 ### Project Structure
+```plaintext
 Text_summarizer_BART/
 │
 ├── app.py                  # Main Flask application
@@ -43,6 +48,7 @@ Text_summarizer_BART/
 │   ├── style.css           # CSS styles
 ├── uploads/                # Directory to store uploaded PDF files
 └── README.md               # This README file
+```
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any changes or improvements.
