@@ -1,1 +1,140 @@
+.container{
+    display: flex;
+    width: 100%;
+    max-width: 1450px;
+}
 
+.left-container, .right-container{
+    flex: 1;
+    padding: 20px;
+}
+
+.upload-container {
+    border: 5px dotted #ccc;
+    border-radius: 20px;
+    width: 620px;
+    height: 70px;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.upload-label {
+    margin-top:80px;
+    color: #888;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+}
+.upload-input{
+    color: #9e59ec;
+    margin-top: 10px;
+    margin-left: 70px;
+    justify-content: center;
+}
+
+.upload-button{
+    border: 2px solid #9e59ec;
+    border-radius: 20px;
+    background-color: #9e59ec;
+    color: white;
+    cursor: pointer;
+    margin-left: 90px;
+    margin-top: 45px;
+    padding: 10px 20px;
+}
+
+.output-container{
+    margin-top: 20px;
+}
+.output-label h3{
+    margin-top: 65px;
+
+}
+.output-box{
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    padding: 0.5em;
+    margin-left: 15px;
+    width: 600px;
+    height: 500px;
+    font-size: 16px;
+    line-height: 1.2;
+    transition: all 0.2s;
+    outline: none;
+    transition: border-color 0.5s;
+}
+
+.output-box.updated {
+    border-color: #604cc3;
+}
+
+/* Typing effect styling */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.output-box.typing {
+    border-right: 2px solid #000;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3s steps(40, end) forwards; /* Adjust duration and steps as needed */
+}
+
+.input-label{
+    font-weight: 50;
+    margin-bottom: 20px;
+}
+
+.input-box{
+    width: 650px;
+    height: 400px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-color:rgb(192, 192, 192);
+    padding: 1rem;
+    outline: none;
+    border: 2px solid transparent;
+    font-size: 16px;
+    line-height: 1.2;
+    transition: all 0.2s;
+}
+.input-box:hover{
+    cursor: pointer;
+    background-color: #eeee;
+
+}
+.input-box:focus{
+    cursor: text;
+    color: #333;
+    background-color:white;
+    border-color: #3333;
+}
+
+.enter-button{
+    font-size: 17px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    padding: 10px 25px;
+    margin:0.5rem;
+    margin-left: 290px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #9e59ec;
+    transition: 0.5s;
+    align-items: center;
+
+}
+.enter-button:hover{
+    background: var(--clr);
+    letter-spacing: 0.2em;
+    box-shadow: 0 0 20px var(--clr);
+
+}
