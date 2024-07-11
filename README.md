@@ -2,6 +2,10 @@
 This project provides a web interface for uploading PDFs or entering text to generate a summarized output using the BiDirectional Auto Regressive Transformer (BART) model. 
 The project is built using Flask for the backend and HTML, CSS, and JavaScript for the frontend.
 
+## Screenshot/Output
+![Project Screenshot](https://github.com/Kabilduke/Text_Summarizer_BART/blob/main/Output%2C%20result%20or%20what%20ever%20you%20call%20it.png)
+
+
 ### Features
 - Upload a PDF file to extract text and generate a summary.
 - Enter text directly into the text area to generate a summary.
