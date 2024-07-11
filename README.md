@@ -3,7 +3,7 @@ This project provides a web interface for uploading PDFs or entering text to gen
 The project is built using Flask for the backend and HTML, CSS, and JavaScript for the frontend.
 
 ## Screenshot/Output
-![Project Screenshot](https://github.com/Kabilduke/Text_Summarizer_BART/blob/main/Output%2C%20result%20or%20what%20ever%20you%20call%20it.png)
+<img src="https://github.com/Kabilduke/Text_Summarizer_BART/blob/main/Output%2C%20result%20or%20what%20ever%20you%20call%20it.png" alt="Project Screenshot" width="600">
 
 
 ### Features
