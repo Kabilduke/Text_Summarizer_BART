@@ -28,10 +28,11 @@ The project is built using Flask for the backend and HTML, CSS, and JavaScript f
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
 
-3.Install the required packages:
-  ```sh
-  pip install flask PyPDF2 transformers
-  ```
+3. Install the required packages:
+   ```sh
+   pip install flask PyPDF2 transformers
+   ```
+   
 4. Run the Flask app:
     ```sh
     python app.py
