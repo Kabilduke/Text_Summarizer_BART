@@ -17,7 +17,6 @@ The project is built using Flask for the backend and HTML, CSS, and JavaScript f
 - Flask
 - PyPDF2
 - Transformers
-- JavaScript
 
 ### Installation
 1. Clone the repository
