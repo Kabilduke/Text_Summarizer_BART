@@ -13,11 +13,11 @@ The project is built using Flask for the backend and HTML, CSS, and JavaScript f
 - Flashy and interactive UI elements for an engaging user experience.
 
 ### Requirement 
-- Python 3.x
+- Python <= 3.10
 - Flask
 - PyPDF2
 - Transformers
-- JavaScript (Fetch API)
+- JavaScript
 
 ### Installation
 1. Clone the repository
